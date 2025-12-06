@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns - Wicker Baumpflege</title>
+    <link rel="stylesheet" href="index-neu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Wicker<br>Baumpflege</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index-neu.html" class="nav-link">Startseite</a>
+                    <a href="#" class="nav-link active">Über mich</a>
+                    <a href="index-neu.html#services" class="nav-link">Angebot</a>
+                    <a href="index-neu.html#works" class="nav-link">Arbeiten</a>
+                    <a href="Kontakt-neu.html" class="nav-link">Kontakt</a>
+                </nav>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index-neu.html" class="nav-link">Startseite</a>
+        <a href="#" class="nav-link active">Über mich</a>
+        <a href="index-neu.html#services" class="nav-link">Angebot</a>
+        <a href="index-neu.html#works" class="nav-link">Arbeiten</a>
+        <a href="Kontakt-neu.html" class="nav-link">Kontakt</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/IMG-20250922-WA0006.jpg" alt="Über uns" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Über mich</h2>
+            <p class="hero-subtitle">Passion für Baumpflege</p>
+        </div>
+    </section>
+
+    <!-- About Detail Section -->
+    <section class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/IMG-20250922-WA0006.jpg" alt="Beda Wicker">
+                </div>
+                <div class="about-text">
+                    <h2>Beda Wicker</h2>
+                    <p class="subtitle">Baumpflegespezialist FA</p>
+                    
+                    <h3>Meine Ausbildung</h3>
+                    <p class="description">
+                        Mit einer Ausbildung als Forstwart und dem eidgenössischen Fachausweis als Baumpflegespezialist bringe ich umfassendes Fachwissen und praktische Erfahrung mit. Diese solide Grundausbildung ermöglicht mir, jede Baumpflege-Aufgabe professionell und sicher auszuführen.
+                    </p>
+                    
+                    <h3>Meine Leidenschaft</h3>
+                    <p class="description">
+                        In den Baumwipfeln fühle ich mich zuhause. Als ausgebildeter Forstwart und Baumpflegespezialist mit eidgenössischem Fachausweis erfüllt es mich, meine Zeit dem Erhalt und der Pflege von Bäumen zu widmen. Ich liebe die Arbeit am lebendigen Objekt und das Klettern und widme mich meinem Beruf mit voller Leidenschaft.
+                    </p>
+                    
+                    <h3>Mein Ansatz</h3>
+                    <p class="description">
+                        Verantwortungsvolle Baumpflege bedeutet für mich, den Baum in seinem natürlichen Wachstum zu unterstützen. Ich nehme Rücksicht auf die Wünsche der Menschen, richte mich aber auch nach den Bedürfnissen des Baumes. Dafür verbinde ich mein Fachwissen mit dem Respekt für das Lebewesen Baum und für sein ökologisches Umfeld.
+                    </p>
+                    
+                    <div class="contact-buttons">
+                        <a href="tel:+41796707194" class="btn btn-primary">Anrufen <span class="btn-phone">+41 79 670 71 94</span></a>
+                        <a href="mailto:info@wicker-baumpflege.ch" class="btn btn-secondary">E-Mail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Wicker Baumpflege. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('active');
+            });
+        }
+        
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-nav .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
