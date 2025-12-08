@@ -43,7 +43,14 @@ body {
 }
 
 @media (max-width: 768px) {
-    .logo .site-logo { height: 56px; }
+    /* smaller logo on mobile */
+    .logo .site-logo { height: 44px; }
+    /* remove mobile menu and hamburger on small screens */
+    .menu-toggle,
+    .mobile-nav,
+    .nav { display: none !important; }
+    /* reduce header vertical footprint */
+    .header-content { padding: 4px 0; }
 }
 
 .hero-bg { will-change: transform; transform: translate3d(0,0,0); }
@@ -281,12 +288,12 @@ a:hover {
 /* hero content placement handled above; responsive adjustments below */
 
 @media (max-width: 768px) {
-    /* On tablet/mobile, use normal flow and center via flexbox */
+    /* Mobile: place hero content so the title/subtitle start near 20% of the hero image */
     .hero-content {
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none;
+        position: absolute;
+        left: 50%;
+        top: 20%; /* content top aligned ~20% down the image */
+        transform: translate(-50%, 0);
         padding: 0 20px;
     }
     .hero-title { font-size: 2.4rem; }
